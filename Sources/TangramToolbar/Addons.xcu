@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Addons" oor:package="org.openoffice.Office">
+<node oor:name="AddonUI">
+	<node oor:name="OfficeToolBar">
+		<node oor:name="tud.mci.tangram.Properties" oor:op="replace">
+			<prop oor:name="Title" oor:type="xs:string">
+				<value xml:lang="en-US">Tangram Toolbar</value>
+			</prop>
+			<!--node oor:name="ToolBarItems"--><!-- comment out for Libre Office, comment in for Open Office -->
+				<node oor:name="tud.mci.tangram.Properties_00" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:XLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>X</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_01" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:X</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>X</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_02" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:YLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Y</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_03" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Y</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Y</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_04" oor:op="replace">
+					<prop oor:name="URL">
+						<value>private:separator</value>
+					</prop>
+					<prop oor:name="Title">
+						<value></value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_05" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:WidthLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Width</value>
+                        <value xml:lang="en">Width</value>
+						<value xml:lang="de">Breite</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_06" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Width</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Width</value>
+                        <value xml:lang="en">Width</value>
+						<value xml:lang="de">Breite</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_07" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:HeightLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Height</value>
+                        <value xml:lang="en">Height</value>
+						<value xml:lang="de">H&#246;he</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_08" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Height</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Height</value>
+                        <value xml:lang="en">Height</value>
+						<value xml:lang="de">H&#246;he</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+								
+				<node oor:name="tud.mci.tangram.Properties_09" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:KeepRatio</value>
+					</prop>
+					<prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Keep Ratio</value>
+                        <value xml:lang="en">Keep Ratio</value>
+						<value xml:lang="de">Seitenverh&#228;ltnis beibehalten</value>
+					</prop>
+					<prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/keepratio</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_10" oor:op="replace">
+					<prop oor:name="URL">
+						<value>private:separator</value>
+					</prop>
+					<prop oor:name="Title">
+						<value></value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_11" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:UnitLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Unit</value>
+                        <value xml:lang="en">Unit</value>
+						<value xml:lang="de">Einheit</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_12" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Unit</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Unit</value>
+                        <value xml:lang="en">Unit</value>
+						<value xml:lang="de">Einheit</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_13" oor:op="replace">
+					<prop oor:name="URL">
+						<value>private:separator</value>
+					</prop>
+					<prop oor:name="Title">
+						<value></value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_14" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:LinesLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Line style</value>
+                        <value xml:lang="en">Line style</value>
+						<value xml:lang="de">Linienstil</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                <node oor:name="tud.mci.tangram.Properties_15" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Lines</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Line style</value>
+                        <value xml:lang="en">Line style</value>
+						<value xml:lang="de">Linienstil</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_16" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:PatternsLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Fill pattern</value>
+                        <value xml:lang="en">Fill pattern</value>
+						<value xml:lang="de">F&#252;llmuster</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                <node oor:name="tud.mci.tangram.Properties_17" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Patterns</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Fill pattern</value>
+                        <value xml:lang="en">Fill pattern</value>
+						<value xml:lang="de">F&#252;llmuster</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_18" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:BorderSpacingButton</value>
+					</prop>
+                    <prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Add spacing between fill pattern and border</value>
+                        <value xml:lang="en">Add spacing between fill pattern and border</value>
+						<value xml:lang="de">Abstand zwischen F&#252;llmuster und Rahmen hinzuf&#252;gen</value>
+					</prop>
+                    <prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/borderspacing</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_19" oor:op="replace">
+					<prop oor:name="URL">
+						<value>private:separator</value>
+					</prop>
+					<prop oor:name="Title">
+						<value></value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_20" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:TitleDescButton</value>
+					</prop>
+                    <prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Show Title/Description</value>
+                        <value xml:lang="en">Show Title/Description</value>
+						<value xml:lang="de">Titel/Beschreibung anzeigen</value>
+					</prop>
+                    <prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/titledesc</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_21" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:MetaDataButton</value>
+					</prop>
+                    <prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Show Metadata dialog</value>
+                        <value xml:lang="en">Show Metadata dialog</value>
+						<value xml:lang="de">Metadaten-Dialog anzeigen</value>
+					</prop>
+                    <prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/metadata</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_22" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:TangramAppButton</value>
+					</prop>
+                    <prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Open Tangram lector</value>
+                        <value xml:lang="en">Open Tangram lector</value>
+						<value xml:lang="de">Tangram Lektor starten</value>
+					</prop>
+                    <prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/tangram</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                
+                <node oor:name="tud.mci.tangram.Properties_23" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:CheckToolButton</value>
+					</prop>
+                    <prop oor:name="ControlType">
+						<value>ToggleButton</value>
+					</prop>
+					<prop oor:name="Title">
+                        <value>Open Tactile Graphic Check Tool</value>
+                        <value xml:lang="en">Open Tactile Graphic Check Tool</value>
+						<value xml:lang="de">Pr&#252;ftool f&#252;r taktile Grafiken &#246;ffnen</value>
+					</prop>
+                    <prop oor:name="ImageIdentifier" oor:type="xs:string">
+						<value>%origin%/icons/checktool</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+                              
+				
+				<!--node oor:name="tud.mci.tangram.Properties_14" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:TitleLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Title</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_15" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Title</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Title</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				
+				<node oor:name="tud.mci.tangram.Properties_16" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:DescLabel</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Description</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node>
+				<node oor:name="tud.mci.tangram.Properties_17" oor:op="replace">
+					<prop oor:name="URL">
+						<value>tud.mci.tangram.Properties:Desc</value>
+					</prop>
+					<prop oor:name="Title">
+						<value>Description</value>
+					</prop>
+					<prop oor:name="Context" oor:type="xs:string">
+						<value>com.sun.star.drawing.DrawingDocument,com.sun.star.presentation.PresentationDocument</value>
+					</prop>
+				</node-->
+                
+			<!--/node--><!-- comment out for Libre Office, comment in for Open Office -->
+		</node>
+	</node>
+</node>
+</oor:component-data>

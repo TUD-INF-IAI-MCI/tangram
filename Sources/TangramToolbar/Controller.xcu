@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oor:name="Controller" oor:package="org.openoffice.Office.UI">
+<node oor:name="Registered">
+	<node oor:name="ToolBar">
+		<node oor:name="tud.mci.tangram.Properties_00" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:XLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>X:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_01" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:X</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_02" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:YLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Y:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_03" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Y</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_05" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:WidthLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Width:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_06" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Width</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_07" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:HeightLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Height:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_08" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Height</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_11" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:UnitLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Unit:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_12" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Unit</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+		<!--node oor:name="tud.mci.tangram.Properties_14" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:TitleLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Unit:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_15" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Title</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+				<node oor:name="tud.mci.tangram.Properties_16" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:DescLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Unit:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_17" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Desc</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node-->
+        <node oor:name="tud.mci.tangram.Properties_14" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:PatternsLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Filling pattern:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_15" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Patterns</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+        <node oor:name="tud.mci.tangram.Properties_21" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:LinesLabel</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+			<prop oor:name="Value" oor:type="xs:string">
+				<value>Line styles:</value>
+			</prop>
+		</node>
+		<node oor:name="tud.mci.tangram.Properties_22" oor:op="replace">
+			<prop oor:name="Command">
+				<value>tud.mci.tangram.Properties:Lines</value>
+			</prop>
+			<prop oor:name="Module">
+				<value></value>
+			</prop>
+			<prop oor:name="Controller">
+				<value>tud.mci.tangram.Properties</value>
+			</prop>
+		</node>
+	</node>
+</node>
+</oor:component-data>

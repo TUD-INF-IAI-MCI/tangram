@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="MetaDataDialog" dlg:left="191" dlg:top="111" dlg:width="405" dlg:height="266" dlg:page="3" dlg:closeable="true" dlg:moveable="true" dlg:title="Metadaten">
+ <dlg:styles>
+  <dlg:style dlg:style-id="0" dlg:background-color="0xeeeeee"/>
+ </dlg:styles>
+ <dlg:bulletinboard>
+  <!--  buttons at the top (representing tabs)  -->
+  <dlg:button dlg:id="CommandButton_Desc" dlg:tab-index="0" dlg:left="13" dlg:top="7" dlg:width="49" dlg:height="16" dlg:value="Beschreibung">
+   <script:event script:event-name="on-performaction" script:macro-name="vnd.sun.star.script:Standard.Module1.MetaDescDialog?language=Basic&amp;location=application" script:language="Script"/>
+  </dlg:button>
+  <dlg:button dlg:id="CommandButton_Rights" dlg:tab-index="1" dlg:left="73" dlg:top="7" dlg:width="49" dlg:height="16" dlg:value="Rechte">
+   <script:event script:event-name="on-performaction" script:macro-name="vnd.sun.star.script:Standard.Module1.MetaRightsDialog?language=Basic&amp;location=application" script:language="Script"/>
+  </dlg:button>
+  <dlg:button dlg:id="CommandButton_Annotations" dlg:tab-index="2" dlg:left="133" dlg:top="7" dlg:width="49" dlg:height="16" dlg:value="Anmerkungen">
+   <script:event script:event-name="on-performaction" script:macro-name="vnd.sun.star.script:Standard.Module1.MetaAnnotationsDialog?language=Basic&amp;location=application" script:language="Script"/>
+  </dlg:button>
+  
+  <!--  buttons at the bottom  -->
+  <dlg:button dlg:id="CommandButton_Save" dlg:tab-index="31" dlg:left="277" dlg:top="243" dlg:width="51" dlg:height="16" dlg:value="Speichern"/>
+  <dlg:button dlg:id="CommandButton_Cancel" dlg:tab-index="32" dlg:left="340" dlg:top="243" dlg:width="51" dlg:height="16" dlg:value="Abbrechen">
+   <script:event script:event-name="on-performaction" script:macro-name="vnd.sun.star.script:Standard.Module1.CancelMetadataDialog?language=Basic&amp;location=application" script:language="Script"/>
+  </dlg:button>
+  
+  <!--  elements of description tab  -->
+  <dlg:titledbox dlg:id="FrameControl_Desc" dlg:tab-index="3" dlg:left="11" dlg:top="37" dlg:width="381" dlg:height="197" dlg:page="1">
+   <dlg:title dlg:value="Beschreibung"/>
+  </dlg:titledbox>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Title" dlg:tab-index="4" dlg:left="20" dlg:top="55" dlg:width="13" dlg:height="10" dlg:page="1" dlg:value="Titel"/>
+  <dlg:textfield dlg:id="TextField_Title" dlg:tab-index="5" dlg:left="37" dlg:top="53" dlg:width="147" dlg:height="16" dlg:page="1"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Type" dlg:tab-index="6" dlg:left="201" dlg:top="55" dlg:width="15" dlg:height="10" dlg:page="1" dlg:value="Typ"/>
+  <dlg:menulist dlg:id="ListBox_Type" dlg:tab-index="37" dlg:left="218" dlg:top="53" dlg:width="92" dlg:height="16" dlg:page="1" dlg:spin="true">
+   <dlg:menupopup>
+    <dlg:menuitem dlg:value="Diagramm"/>
+    <dlg:menuitem dlg:value="Schematische Darstellung"/>
+    <dlg:menuitem dlg:value="Foto/Screenshot"/>
+    <dlg:menuitem dlg:value="Zeichnung"/>
+    <dlg:menuitem dlg:value="anderes..."/>
+   </dlg:menupopup>
+  </dlg:menulist>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Language" dlg:tab-index="7" dlg:left="327" dlg:top="55" dlg:width="25" dlg:height="10" dlg:page="1" dlg:value="Sprache"/>
+  <dlg:menulist dlg:id="ListBox_Language" dlg:tab-index="8" dlg:left="355" dlg:top="53" dlg:width="28" dlg:height="16" dlg:page="1" dlg:value="de" dlg:spin="true" dlg:linecount="6">
+   <dlg:menupopup>
+    <dlg:menuitem dlg:value="de" dlg:selected="true"/>
+    <dlg:menuitem dlg:value="en"/>
+    <dlg:menuitem dlg:value="fr"/>
+    <dlg:menuitem dlg:value="es"/>
+    <dlg:menuitem dlg:value="it"/>
+    <dlg:menuitem dlg:value="andere"/>
+   </dlg:menupopup>
+  </dlg:menulist>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_ShortDesc" dlg:tab-index="9" dlg:left="20" dlg:top="76" dlg:width="53" dlg:height="10" dlg:page="1" dlg:value="Kurzbeschreibung"/>
+  <dlg:textfield dlg:id="TextField_ShortDesc" dlg:tab-index="10" dlg:left="20" dlg:top="88" dlg:width="362" dlg:height="25" dlg:page="1" dlg:vscroll="true" dlg:multiline="true"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_LongDesc" dlg:tab-index="11" dlg:left="20" dlg:top="120" dlg:width="78" dlg:height="10" dlg:page="1" dlg:value="Ausführliche Beschreibung"/>
+  <dlg:textfield dlg:id="TextField_LongDesc" dlg:tab-index="13" dlg:left="20" dlg:top="132" dlg:width="362" dlg:height="51" dlg:page="1" dlg:vscroll="true" dlg:multiline="true"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Keywords" dlg:tab-index="12" dlg:left="20" dlg:top="192" dlg:width="44" dlg:height="10" dlg:page="1" dlg:value="Schlagwörter"/>
+  <dlg:textfield dlg:id="TextField_Keywords" dlg:tab-index="14" dlg:left="20" dlg:top="204" dlg:width="362" dlg:height="19" dlg:page="1" dlg:vscroll="true" dlg:multiline="true"/>
+
+  <!--  elements of rights tab  -->
+  <dlg:titledbox dlg:id="FrameControl_Rights" dlg:tab-index="15" dlg:left="11" dlg:top="37" dlg:width="381" dlg:height="197" dlg:page="2">
+   <dlg:title dlg:value="Rechte"/>
+  </dlg:titledbox>
+
+  <dlg:text dlg:style-id="0" dlg:id="Label_Author" dlg:tab-index="18" dlg:left="20" dlg:top="55" dlg:width="19" dlg:height="10" dlg:page="2" dlg:value="Autor"/>
+  <dlg:textfield dlg:id="TextField_Author" dlg:tab-index="19" dlg:left="44" dlg:top="53" dlg:width="219" dlg:height="16" dlg:page="2"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Source" dlg:tab-index="22" dlg:left="20" dlg:top="82" dlg:width="222" dlg:height="10" dlg:page="2" dlg:value="Redmine-ID bzw. Quelle (Urheber des Originals, Literatur inkl. Seitenangabe)"/>
+  <dlg:textfield dlg:id="TextField_Source" dlg:tab-index="23" dlg:left="20" dlg:top="94" dlg:width="362" dlg:height="45" dlg:page="2" dlg:vscroll="true" dlg:multiline="true"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Rights" dlg:tab-index="24" dlg:left="20" dlg:top="153" dlg:width="168" dlg:height="10" dlg:page="2" dlg:value="Rechte und Copyright"/>
+  <dlg:textfield dlg:id="TextField_Rights" dlg:tab-index="25" dlg:left="20" dlg:top="165" dlg:width="362" dlg:height="54" dlg:page="2" dlg:vscroll="true" dlg:multiline="true" dlg:value="interne Verwendung für Lehrzwecke"/>
+
+  <!--  elements of annotations tab  -->
+  <dlg:titledbox dlg:id="FrameControl_Annotations" dlg:tab-index="26" dlg:left="11" dlg:top="37" dlg:width="381" dlg:height="197" dlg:page="3">
+   <dlg:title dlg:value="Anmerkungen"/>
+  </dlg:titledbox>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Method" dlg:tab-index="27" dlg:left="20" dlg:top="55" dlg:width="29" dlg:height="10" dlg:page="3" dlg:value="Methode"/>
+  <dlg:menulist dlg:id="ListBox_Method" dlg:tab-index="28" dlg:left="51" dlg:top="53" dlg:width="77" dlg:height="16" dlg:page="3" dlg:spin="true" dlg:linecount="6">
+   <dlg:menupopup>
+    <dlg:menuitem dlg:value="Schwellpapier"/>
+    <dlg:menuitem dlg:value="Tiger-Ausdruck"/>
+    <dlg:menuitem dlg:value="Emprint-Ausdruck"/>
+    <dlg:menuitem dlg:value="Tiefziehfolie"/>
+    <dlg:menuitem dlg:value="Großdruck"/>
+    <dlg:menuitem dlg:value="anderes..."/>
+   </dlg:menupopup>
+  </dlg:menulist>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Status" dlg:tab-index="20" dlg:left="289" dlg:top="55" dlg:width="22" dlg:height="10" dlg:page="2" dlg:value="Status"/>
+  <dlg:menulist dlg:id="ListBox_Status" dlg:tab-index="21" dlg:left="313" dlg:top="53" dlg:width="69" dlg:height="16" dlg:page="2" dlg:spin="true">
+   <dlg:menupopup>
+    <dlg:menuitem dlg:value="Entwurf" dlg:selected="true"/>
+    <dlg:menuitem dlg:value="Korrektur"/>
+    <dlg:menuitem dlg:value="Final"/>
+   </dlg:menupopup>
+  </dlg:menulist>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Proofreader" dlg:tab-index="29" dlg:left="171" dlg:top="55" dlg:width="35" dlg:height="10" dlg:page="3" dlg:value="Proofreader"/>
+  <dlg:textfield dlg:id="TextField_Proofreader" dlg:tab-index="30" dlg:left="211" dlg:top="53" dlg:width="170" dlg:height="16" dlg:page="3"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Adaptions" dlg:tab-index="33" dlg:left="20" dlg:top="82" dlg:width="211" dlg:height="10" dlg:page="3" dlg:value="Vorgenommene Anpassungen (z.B. Vereinfachungen, Löschungen...)"/>
+  <dlg:textfield dlg:id="TextField_Adaptions" dlg:tab-index="34" dlg:left="20" dlg:top="94" dlg:width="362" dlg:height="58" dlg:page="3" dlg:vscroll="true" dlg:multiline="true"/>
+  
+  <dlg:text dlg:style-id="0" dlg:id="Label_Annotations" dlg:tab-index="35" dlg:left="20" dlg:top="166" dlg:width="211" dlg:height="10" dlg:page="3" dlg:value="Weitere Anmerkungen"/>
+  <dlg:textfield dlg:id="TextField_Annotations" dlg:tab-index="36" dlg:left="20" dlg:top="178" dlg:width="362" dlg:height="45" dlg:page="3" dlg:vscroll="true" dlg:multiline="true"/>
+  
+ </dlg:bulletinboard>
+</dlg:window>

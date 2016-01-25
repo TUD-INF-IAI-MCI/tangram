@@ -1,0 +1,17 @@
+Hinzufügen eines neuen Toolbar-Elements:
+
+1) neuer <node> in Addons.xcu
+
+2) falls Liste oder Eingabefeld:
+	a) neuer <node> in Controller.xcu
+	b) bei Bedarf: Definition von Konstanten in der Klasse Frame(), z.B. für alle Listeneinträge
+	c) Aufnahme in das Dictonairy von der Klasse Frame() --> set_item-Methode
+	d) Definition (als Klasse) und Hinzufügen (in set_item-Methode) von einem entsprechendem Listener
+	e) apply()-Methode definieren --> wird vom entsprechenden Listener aufgerufen
+	f) Element erstellen --> createItemWindow() in Klasse ToolbarController
+	g) bei Bedarf: in Methode enable_fields() und fill_values() ergänzen --> machen Element inaktiv bzw. füllen es mit den entsprechenden Werten (vom fokussierten Element)
+
+3) falls Button:
+	a) Klasse zur Bereitstellung der Funktionalität --> class...(unohelper.Base, XDispatch, XControlNotificationListener)
+	b) neuer Dispatch in der Klasse ToolbarProtocolHandler, der die Funktionalitäten-Klasse aufruft
+	c) Aufnahme in das Dictonairy von der Klasse Frame() nicht notwendig --> set_item-Methode --> stattdessen "pass"

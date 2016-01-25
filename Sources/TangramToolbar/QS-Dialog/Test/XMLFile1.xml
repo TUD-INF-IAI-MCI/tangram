@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<testCriteria xmlns:xlink="http://www.w3.org/1999/xlink">
+<metadata>
+  <head profile="http://dublincore.org/documents/dcq-html/">
+    <link relation="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+    <link relation="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+    <meta name="DC.title" content="Prüfkriterien für taktile Grafiken"/>
+    <meta name="DC.creator" content="Denise Prescher und Jens Bornschein"/>
+    <meta name="DC.subject" content="Prüfkriterien"/>
+    <meta name="DC.description" content="Kriterien zur Überprüfung der Qualität taktiler Grafiken"/>
+    <meta name="DC.publisher" content="TU Dresden, Fakultät Informatik, Institut für Angewandte Informatik, Prof. Mensch-Computer Interaktion"/>
+    <meta name="DC.contributor" content="Philipp Dienst und Tobias Streicher"/>
+    <meta name="DC.date" content="2014-05-12" scheme="DCTERMS.W3CDTF"/>
+    <meta name="DC.type" content="Text" scheme="DCTERMS.DCMIType"/>
+    <meta name="DC.format" content="text/xml" scheme="DCTERMS.IMT"/>
+    <meta name="DC.identifier" content="TU-Dresden/MCI/Tangram/Prüfkriterien.xml" scheme="DCTERMS.URI"/>
+    <meta name="DC.source" content="http://...Prüfkriterien.xml" scheme="DCTERMS.URI"/>
+    <meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"/>
+    <meta name="DC.relation" content="http://dublincore.org/" scheme="DCTERMS.URI"/>
+    <meta name="DC.coverage" content="Germany" scheme="DCTERMS.TGN"/>
+    <meta name="DC.rights" content="Alle Rechte liegen beim Autor."/>
+  </head>
+</metadata>
+
+
+  <category name="Bildaufbau" id="BA">
+    <desc>Die folgenden Kriterien beziehen sich auf den groben Aufbau sowie die grundlegenden Eigenschaften einer taktilen Grafik. Generell gilt, dass eine taktile Grafik so groß wie möglich sein sollte, um eine gute Wahrnehmbarkeit zu gewährleisten. Auf zu große Leerräume zwischen den einzelnen Elementen sollte allerdings verzichtet werden.</desc>
+    <help></help>
+    <criterion id="BA_KZ" name="Konsistenz" mode="M" priority="3" relation="">
+      <desc>Der grundlegende Aufbau von taktilen Grafiken sollte zumindest innerhalb einer Institution konsistent sein.</desc>
+      <help>Die angegebenen Empfehlungen zum Aufbau gelten für taktile Grafiken, die durch die AGSBS der TU Dresden erstellt werden. Andere Einrichtungen können diesbezüglich eigene Richtlinien haben.</help>
+      <recommendation type="all">
+        <item>
+          <desc>Abbildungskennung ...</desc>
+        </item>
+        <item>
+          <desc>Überschrift/Titel der Grafik links oben</desc>
+        </item>
+        <item>
+          <desc>Transcriber's Note und Beschriftung?</desc>
+        </item>
+        <item>
+          <desc>Seitenzahl (print version links unten + braille page rechts unten)</desc>
+        </item>
+        <item>
+          <desc>Legende ...</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BA_UA" name="Wahrung der ursprünglichen Aussage" mode="M" priority="1" relation="">
+      <desc>Die originale Grafik darf/muss bei der Umsetzung in eine taktile Form aus Gründen der besseren Wahrnehmbarkeit modifiziert werden, allerdings darf dabei die ursprüngliche Aussage nicht verloren gehen.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>Reduzierung auf die Kernaussage der Grafik (vgl. Empfehlungen zur Einfachheit, BA_E)</li>
+			<li>Einhaltung von Größenverhältnissen, wenn dies für die Aussage der Grafik relevant ist</li>
+			</ul>]]>
+      </help>
+      <recommendation type="all">
+        <item>
+          <desc>ursprüngliche Aussage der Grafik ist erhalten</desc>
+        </item>
+      </recommendation>
+
+    </criterion>
+
+
+    <criterion id="BA_E" name="Einfachheit" mode="M" priority="1" relation="">
+      <desc>
+        Eine taktile Grafik sollte in ihrem Aufbau möglichst einfach gehalten werden,
+        ohne dabei die ursprüngliche Aussage zu verfälschen oder dem Leser Informationen vorzuenthalten.
+      </desc>
+      <help>
+        <![CDATA[<p>Möglichkeiten zur Reduzierung der Komplexität:</p>
+			<ul><li>Weglassen von unwichtigen Details (z.B. Rahmen weglassen, wenn diese nicht als Referenz dienen)</li>
+			<li>sekundäre Informationen lieber in Bildbeschreibung, Legende oder Transcriber's Note aufnehmen</li>
+			<li>Vergrößern von Bildelementen oder Ersetzen durch leichter verständliche Elemente</li>
+			<li>Umgruppieren von Bildelementen oder Veränderung der Anordnung einzelner Elemente</li>
+			<li>Schaffung von klaren Strukturen, z.B. einheitliche Leserichtung</li>
+			<li>wenn nötig: Zerlegung in Teilbilder oder Step-By-Step Technik (verschiedene Versionen einer Grafik); evtl. auch stark vereinfachte Überblicksgrafik notwendig (Referenzpunkte zum Verstehen von Zusammenhängen)</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item role="rating">
+          <desc>Grad der Einfachheit</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BA_P" name="Vermeidung von Perspektive" mode="M" priority="2" relation="">
+      <desc>3-dimensionale perspektivische Darstellungen sollten nach Möglichkeit vermieden werden.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>Überführung von 3D-Darstellungen in eine äquivalente 2D-Ansicht</li>
+			<li>bei Bedarf: Verwendung mehrerer 2D-Ansichten</li>
+			</ul>]]>
+      </help>
+      <recommendation type="all">
+        <item>
+          <desc>keine 3-dimensionale perspektivische Darstellung verwendet</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BA_LR" name="Erkennbare Leserichtung" mode="H" priority="1" relation="">
+      <desc>Es muss eindeutig ersichtlich sein, in welcher Richtung die taktile Grafik orientiert ist, d.h. wo oben und wo unten ist.</desc>
+      <help>
+        <![CDATA[<p>Mögliche Maßnahmen (eine Maßnahme ist ausreichend):</p>
+			<ul><li>Verwendung eines taktilen Lese-Richtungs-Pfeils</li>
+			<li>Einkerbung, z.B. in oberer linker Ecke (auf Konsistenz achten!)</li>
+			<li>klare Orientierung durch den Braille-Titel der Grafik</li></ul>
+			<p>Zusätzlich kann auch ein direkter Tasteinstieg zur Kennzeichnung der Startposition angeboten werden, z.B. eingeschnittenes Dreieck.</p>]]>
+      </help>
+      <recommendation type="all">
+        <item>
+          <desc>Orientierung der Grafik ist erkennbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BA_RL" name="Vorhandensein einer Referenzlinie" mode="M" priority="3" relation="">
+      <desc>Insbesondere bei Grafiken, in denen Größenrelationen illustriert werden, sollte eine Referenzlinie vorhanden sein.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Gestaltung von Referenzlinien:</p>
+			<ul><li>Referenzlinie als Horizont (Baseline) kann normale Linienstärke aufweisen (vgl. TL_D)</li>
+			<li>Hilfslinien zwischen Objekten ohne eigene Bedeutung sollten nur zart gestrichelt sein</li></ul>]]>
+      </help>
+      <recommendation type="one">
+        <item>
+          <desc>Referenzlinie ist vorhanden und als solche identifizierbar</desc>
+        </item>
+        <item>
+          <desc>Referenzlinie ist nicht notwendig</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BA_AR" name="Abstand zum Rand" mode="H" priority="3" relation="">
+      <desc>Zur besseren Tastbarkeit der Grafik sollte zum Rand des Papiers etwas Abstand eingehalten werden.</desc>
+      <help><![CDATA[<p>Die Papiergröße sollte möglichst optimal ausgenutzt werden, um die Grafik größtmöglich darzustellen. Dennoch sollte ein entsprechender Rand gelassen werden.</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>Abstand zum Rand</desc>
+          <var name="Abstand" min="1 cm" media="all"/>
+          <var name="Abstand" min="1 cm" media="Schwellpapier"/>
+          <var name="Abstand" min="1 cm" media="Tiger"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+  </category>
+
+  <category name="Bildelemente" id="BE">
+    <desc>Prinzipiell ist es sehr schwer bzw. teilweise unmöglich, für alle Medien/Produktionsmethoden die gleichen Symbole (Linien, Formen usw.) zu verwenden [Edman 1992, S.207]. Die folgenden grundlegenden Kriterien für Bildelemente sind jedoch unabhängig vom Medium zu beachten.</desc>
+    <help><![CDATA[<p>Höhe der Elemente nach Möglichkeit unterschiedlich: Braille (0,5mm), Bereichssymbole am niedrigsten (0,5 - 1mm), dann Liniensymbole (1mm) und Punktsymbole am höchsten (1,5mm); Variationen in der Höhe liefern dem Leser die größte Informationsmenge [Edman 1992, S. 208]</p>]]></help>
+
+    <criterion id="BE_US" name="Unterscheidbarkeit" mode="H" priority="1" relation="">
+      <desc>Die einzelnen Elemente der Grafik sollten gut taktil voneinander unterscheidbar sein.</desc>
+      <help><![CDATA[<p>Eng in Zusammenhang mit diesem Kriterium steht auch die Einhaltung von bestimmten Mindestabständen (vgl. BE_MA, TF_PS, TL_A).</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Symbole sind eindeutig und gut unterscheidbar</desc>
+        </item>
+        <item>
+          <desc>Texturen und Linienarten sind gut unterscheidbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BE_UE" name="Vermeidung von Überschneidungen" mode="M" priority="2" relation="">
+      <desc>Flächen und Linien sollten sich nicht überschneiden.</desc>
+      <help>
+        <![CDATA[<p>Falls eine Überschneidung nicht vermeidbar ist, dann müssen zumindest folgende Aspekte beachtet werden:</p>
+			<ul><li>Einfügen eines kleinen Abstands (1 bis 2 mm) zwischen angrenzenden Texturen und bei sich kreuzenden Linien</li>
+			<li>gute Unterscheidbarkeit von Textur und Linienart</li>
+			<li>Verwendung unterschiedlicher Linienarten</li>
+			</ul>
+		<p>Ein zu spitzer Winkel (<20°)sollte allerdings vermieden werden, um die Verfolgung der einzelnen Linien zu gewährleisten.</p>]]>
+      </help>
+      <recommendation type="one">
+        <item>
+          <desc>keine Überschneidungen vorhanden</desc>
+        </item>
+        <item>
+          <desc>Überschneidung nicht vermeidbar, aber Anforderungen wurden beachtet (siehe Hilfekommentar)</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BE_UN" name="Vermeidung von Unterbrechungen" mode="M" priority="2" relation="">
+      <desc>Linien dürfen nicht durch andere Elemente unterbrochen werden.</desc>
+      <help>
+        <![CDATA[<p>Ausnahmen:</p>
+			<ol><li>Bei zwei sich kreuzenden Linien sollte die auffälligere bzw. dickere Linie unterbrochen werden, um eine direkte Überschneidung zu vermeiden (vgl. BE_UE). Ein zu spitzer Winkel (<20°) sollte dabei vermieden werden, um die Verfolgung der einzelnen Linien zu gewährleisten.</li>
+			<li>Liegt ein Punktsymbol auf einer Linie (z.B. bei Landkarten) muss diese u.U. unterbrochen werden.</li>
+			</ol>]]>
+      </help>
+      <recommendation type="one">
+        <item>
+          <desc>Linien werden durch keine anderen Elemente unterbrochen</desc>
+        </item>
+        <item>
+          <desc>Ausnahmeregelung trifft zu</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BE_MA" name="Einhaltung eines Mindesabstands" mode="H" priority="1" relation="">
+      <desc>Für die Wahrnehmbarkeit einzelner taktiler Elemente ist ein gewisser Mindestabstand nötig.</desc>
+      <help><![CDATA[<p>Anmerkung: Zu große Leerräume innerhalb der Grafik sollten allerdings vermieden werden.</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>Abstand zwischen einzelnen Elementen</desc>
+          <var name="Abstand" min="0.3 cm" media="all"/>
+          <var name="Abstand" min="0.6 cm" media="Tiger"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BE_EE" name="Erhabene Elemente" mode="M" priority="1" relation="">
+      <desc>Bedeutsame Elemente, wie Linien oder Symbole, sollten erhaben dargestellt sein, da sie so deutlich besser wahrnehmbar sind als Versenkungen.</desc>
+      <help></help>
+      <recommendation type="count">
+        <item>
+          <desc>keine kleinen Versenkungen (kleiner als 6x6mm bei Schwellpapier bzw. 8x8mm bei Tiger) vorhanden</desc>
+        </item>
+        <item>
+          <desc>Linien sind alle erhaben dargestellt</desc>
+        </item>
+        <item>
+          <desc>Punktsymbole sind alle erhaben dargestellt</desc>
+        </item>
+      </recommendation>
+    </criterion>
+  </category>
+
+  <category name="Braillebeschriftungen" id="BB">
+    <desc>Beschriftungen innerhalb taktiler Grafiken sollten möglichst kurz gehalten werden und müssen lesbar in Brailleschrift angegeben werden. Nachfolgend werden die wichtigsten Aspekte vorgestellt, die in diesem Zusammenhang beachtet werden müssen.</desc>
+    <help></help>
+    <criterion id="BB_R" name="Reduzierung von Text" mode="M" priority="2" relation="">
+      <desc>Unnötige Texte und Beschriftungen sollten aus der taktilen Grafik entfernt werden.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>Nur für die Aussage der Grafik erforderliche Texte/Labels beibehalten, ansonsten lieber in Bildbeschreibung auslagern</li>
+			<li>Beschriftungen möglichst kurz halten</li>
+			<li>Bei Bedarf Auslagerung in Legende (z.B. nur Abkürzung aus 2 bis 3 Buchstaben verwenden)</li>
+			</ul>]]>
+      </help>
+      <recommendation type="all">
+        <item>
+          <desc>keine unnötigen Texte und Beschriftungen vorhanden</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_B" name="Beschriftungen in Braille" mode="H" priority="1" relation="">
+      <desc>Beschriftungen (Labels) innerhalb der Grafik müssen für blinde Nutzer lesbar in Braille repräsentiert werden.</desc>
+      <help>
+        <![CDATA[<p>Empfohlene Schriftgröße für Braillefonts: 40</p>
+		<p>Wenn keine Braillefonts verwendet werden können, sollten zumindest folgende Maße beachtet werden (siehe <a href="http://www.fakoo.de/braille/braille_bemessung.gif">www.fakoo.de/braille</a>):</p>
+			<ul><li>Punktdurchmesser: 1,5 mm</li>
+			<li>Abstand zwischen den Punkten eines Zeichens (vom Mittelpunkt): 2,5 mm</li>
+			<li>Abstand zwischen zwei Zeichen (vom Mittelpunkt): 3,5 mm</li>
+			<li>Zeilenabstand (vom Mittelpunkt): 5 mm</li></ul>
+		<p>Einzelne Braille-Buchstaben sollten vermieden werden. Falls dennoch einzelne Buchstaben oder Zahlen verwendet werden sollen, dann sollten diese entweder mit einem vorangehenden Vollzeichen (%) gekennzeichnet werden (z.B. "%a") oder durch eine dünne Umrahmung (z.B. Kreis) hervorgehoben werden, da diese sonst schwer als Braille identifizierbar sind.</p>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Verwendung von Braillefonts oder zumindest Beachtung der Standard-Maße (siehe Hilfekommentar)</desc>
+        </item>
+        <item>
+          <desc>Keine Verwendung einzelner Braille-Buchstaben (siehe Hilfekommentar)</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_P" name="Platzierung von Beschriftungen" mode="H" priority="2" relation="">
+      <desc>Beschriftungen sollten konsistent und gut lesbar in der Grafik platziert werden.</desc>
+      <help>
+        <![CDATA[<p>Anmerkung: Vor allem bei Diagrammen o.Ä. sollten die Beschriftungen möglichst immer auf der gleichen Seite der Grafikelemente dargestellt werden.</p>
+		<p>Sollten Objekte mehrfach in der Grafik auftauchen, dann können diese auch jedes Mal mit einem Label versehen werden, falls sie nicht bereits in einer Legende erklärt werden.</p>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Horizontale Ausrichtung entsprechend der Orientierung der taktilen Grafik</desc>
+        </item>
+        <item>
+          <desc>Linksbündige Darstellung bei Zeilenumbruch</desc>
+        </item>
+        <item>
+          <desc>Einheitliche Platzierung (z.B. neben den Grafikelementen)</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_A" name="Eindeutige Zuordnung zum Grafikelement" mode="M" priority="1" relation="">
+      <desc>Beschriftungen sollten möglichst nah an dem Element platziert werden, welches sie beschreiben, sodass die Zuordnung eindeutig ist.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>Es muss eindeutig erkennbar sein, auf welches Element sich das Label bezieht</li>
+			<li>Grafikelemente dürfen nicht durch Labels unterbrochen werden, notfalls nur Abkürzung verwenden (vgl. BB_VF)</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Abstand der Beschriftung zum Grafikelement</desc>
+          <var name="Abstand" min="0.3 cm" max="0.6 cm" media="all"/>
+          <var name="Abstand" min="0.4 cm" max="0.6 cm" media="Tiger"/>
+        </item>
+        <item>
+          <desc>Zuordnung zum Grafikelement ist eindeutig erkennbar</desc>
+        </item>
+        <item>
+          <desc>Grafikelemente werden nicht durch Labels unterbrochen</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_VF" name="Vermeidung von Führungslinien" mode="M" priority="2" relation="">
+      <desc>Um die Grafik möglichst einfach zu halten, sollten Führungslinien vermieden werden.</desc>
+      <help>
+        <![CDATA[<p>Falls ein Label nicht nah genug am Element platziert werden kann (vgl. BB_A), sollte eine Abkürzung verwendet und diese in der Legende erklärt werden.</p>
+			<p>Wenn auf Führungslinien nicht verzichtet werden kann (z.B. bei der Zuordnung zu kleinen Objekten), ist Kriterium BB_FL zu beachten.</p>]]>
+      </help>
+      <recommendation type="one">
+        <item>
+          <desc>keine Führungslinien vorhanden</desc>
+        </item>
+        <item id="BB_VF_2" role="condition" xlink:href="#BB_FL">
+          <desc>Führungslinien sind vorhanden</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_FL" name="Unscheinbare Führungslinien" mode="H" priority="1" relation="BB_VF_2">
+      <desc>Falls auf Führungslinien nicht verzichtet werden kann, sollten diese so unscheinbar wie möglich sein und sich deutlich von den anderen Linien abheben.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>deutlich unterscheidbare Linienart verwenden</li>
+			<li>möglichst dünne Linie verwenden (Haarlinie bei Tiger bzw. 0,7 mm bei Schwellpapier)</li>
+			<li>Führungslinie möglichst kurz halten (ideal sind 2 cm), bei Unterbrechung durch ein anderes Grafikelement sollte jeder Linienabschnitt mindestens 1 cm lang sein</li>
+			<li>Kurven und Richtungsänderungen der Linie vermeiden</li>
+			<li>keine Pfeilspitze am Ende verwenden</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Führungslinien sind möglichst kurz gehalten</desc>
+          <var name="Führungslinienlänge" value="2 cm" max="3.8 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Abstand zum Zielobjekt</desc>
+          <var name="Abstand" value="0.3 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Führungslinien heben sich deutlich von den anderen Linien ab</desc>
+        </item>
+        <item>
+          <desc>Führungslinien sind unscheinbar</desc>
+        </item>
+        <item>
+          <desc>Führungslinien sind geradlinig</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="BB_TL" name="Erkennbarkeit von Labels in Texturen" mode="M" priority="1" relation="">
+      <desc>Labels in Texturen müssen als Braille erkennbar sein und dürfen nicht mit der Textur verschwimmen.</desc>
+      <help><![CDATA[<p>Anmerkung: Zur Erhöhung der Lesbarkeit sollte der Leerraum um das Label mindestens 3 mm an allen Seiten betragen.</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Labels in Texturen sind als Braille erkennbar</desc>
+        </item>
+        <item>
+          <desc>Abstand zwischen Label und Textur ist ausreichend groß</desc>
+        </item>
+      </recommendation>
+    </criterion>
+  </category>
+
+  <category name="Legenden" id="LE">
+    <desc>Im Folgenden werden Kriterien zur Umsetzung von Legenden sowie der dort verwendeten Symbole definiert.</desc>
+    <help></help>
+    <criterion id="LE_L" name="Vorhandensein einer Legende" mode="H" priority="1" relation="">
+      <desc>Werden in einer Grafik Abkürzungen oder taktile Symbole verwendet, so müssen diese in einer Legende erläutert werden.</desc>
+      <help><![CDATA[<p>Anmerkung: Die Legende sollte nicht direkt neben der Grafik platziert werden, sondern lieber auf einer separaten Seite (Seite vor der Grafik). Bei einfachen Grafiken, die nicht viel Platz benötigen, kann die Legende auch darunter/darüber platziert werden (wichtig: etwas Abstand zur Grafik lassen).</p>]]></help>
+      <recommendation type="one">
+        <item id="LE_L_1" role="condition" xlink:href="#LE_T">
+          <desc>Legende ist vorhanden</desc>
+        </item>
+        <item>
+          <desc>Legende ist nicht notwendig</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_T" name="Titel der Grafik" mode="H" priority="1" relation="LE_L_1">
+      <desc>Am Anfang der Legende sollte der Titel der Grafik stehen, auf welche sich die Legende bezieht.</desc>
+      <help></help>
+      <recommendation type="all">
+        <item>
+          <desc>Links oben auf dem Legendenblatt der Titel der Grafik in Brailleschrift</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_K" name="Konsistente Platzierung der Symbole und Beschriftungen" mode="H" priority="2" relation="LE_L_1">
+      <desc>Legendensymbole und deren Braillebeschriftungen sollten konsistent und in einer logischen Reihenfolge in Form einer zweispaltigen Tabelle platziert werden.</desc>
+      <help>
+        <![CDATA[<p>Als Reihenfolge innerhalb der Legende wird folgende Sortierung empfohlen: Bereichssymbole, Liniensymbole, Punktsymbole, alphabetische Schlüssel, numerische Schlüssel.</p>
+		<p>Zwischen Symbol und Beschriftung sollte nicht zu viel Platz gelassen werden.</p>
+		<p>Die verschiedenen Symboltypen müssen eine einheitliche Größe aufweisen. Zum Beispiel müssen alle Bereichssymbole die gleichen Ausmaße besitzen, unter Beachtung der notwendigen Mindestgröße (vgl. Kriterium LE_BS).</p>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Symbole linksbündig untereinander in der linken Spalte</desc>
+        </item>
+        <item>
+          <desc>Beschriftungen neben den Symbolen in der rechten Spalte</desc>
+        </item>
+        <item>
+          <desc>Beachtung einer logischen Reihenfolge</desc>
+        </item>
+        <item>
+          <desc>alle Symbole einer Art weisen eine einheitliche Größe auf</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_S" name="Einhaltung der Skalierung" mode="H" priority="1" relation="LE_L_1">
+      <desc>Die Legendensymbole sollten die originale Skalierung aufweisen, wie sie auch in der Grafik verwendet werden.</desc>
+      <help></help>
+      <recommendation type="count">
+        <item>
+          <desc>Bereichssymbole (Texturen) sind in der Legende gleich skaliert wie in der Grafik</desc>
+        </item>
+        <item>
+          <desc>Liniensymbole sind in der Legende gleich skaliert wie in der Grafik</desc>
+        </item>
+        <item>
+          <desc>Punktsymbole sind in der Legende gleich skaliert wie in der Grafik</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_BS" name="Bereichssymbole" mode="H" priority="2" relation="LE_L_1">
+      <desc>Die Größe der Bereichssymbole (Textur) darf ein bestimmtes Minimum nicht unterschreiten.</desc>
+      <help><![CDATA[<p>Anmerkung: Um eine Textur eindeutig zu erkennen, müssen alle relevanten Eigenschaften innerhalb des Bereichssymbols dargestellt sein. Vor allem grobe Texturen verlangen demzufolge ein ausreichend großes Bereichssymbol.</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Breite des Texturmusters</desc>
+          <var name="Breite" min="3 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Höhe des Texturmusters</desc>
+          <var name="Hoehe" min="1.5 cm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_LS" name="Liniensymbole" mode="H" priority="2" relation="LE_L_1">
+      <desc>Die Länge der Liniensymbole darf ein bestimmtes Minimum nicht unterschreiten.</desc>
+      <help><![CDATA[<p>Anmerkung: Um das Muster der Linie eindeutig zu erkennen, muss es zumindest in einer dreimaligen Wiederholung über die Länge des Liniensymbols dargestellt sein.</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>Länge eines Liniensymbols</desc>
+          <var name="Laenge" min="2.5 cm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="LE_PS" name="Punktsymbole" mode="H" priority="2" relation="LE_L_1">
+      <desc>Punktsymbole sollten im Raster der Braillebeschriftung liegen und eine minimale Größe nicht unterschreiten.</desc>
+      <help><![CDATA[<p>Anmerkung: Die Verwendung von Standardsymbolen ist von Vorteil (falls vorhanden).</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Punktsymbole sind bündig mit der oberen Kante der Braillebeschriftung</desc>
+        </item>
+        <item>
+          <desc>Höhe von Punktsymbolen</desc>
+          <var name="Hoehe" min="6 mm" media="all"/>
+        </item>
+        <item>
+          <desc>Breite von Punktsymbolen</desc>
+          <var name="Breite" min="6 mm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+  </category>
+
+  <category name="Taktile Formen und Füllungen" id="TF">
+    <desc>Bei der Umsetzung einzelner Grafikobjekte ist darauf zu achten, dass diese für die taktile Wahrnehmung optimiert werden müssen. Die folgenden Kriterien beziehen sich auf taktile Formen, wie Punktsymbole und Pfeile, sowie die Verwendung von Füllmustern in größeren Objekten.</desc>
+    <help></help>
+    <criterion id="TF_OG" name="Minimale Objektgröße" mode="H" priority="1" relation="">
+      <desc>Formen, wie Drei- oder Vierecke, sollten eine minimale Größe aufweisen, um erkennbar zu sein.</desc>
+      <help></help>
+      <recommendation type="all">
+        <item>
+          <desc>Länge einer Seite des Objekts</desc>
+          <var name="Laenge" min="1.3 cm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_PS" name="Punktsymbole" mode="H" priority="1" relation="">
+      <desc>Kleine Objekte, wie Punktsymbole, sollten einen gewissen Mindestabstand zu anderen Symbolen besitzen.</desc>
+      <help><![CDATA[<p>Anmerkung: Je kleiner die Symbole, desto größer muss der Abstand sein.</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>Abstand von Punktsymbolen zu anderen Symbolen</desc>
+          <var name="Abstand" min="3 mm" media="all"/>
+          <var name="Abstand" min="6 mm" media="Tiger"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_PF" name="Vermeidung von Pfeilen" mode="M" priority="2" relation="">
+      <desc>Pfeile sollten möglichst vermieden oder zumindest auf ein Minimum reduziert werden.</desc>
+      <help><![CDATA[<p>Hinweis zur Umsetzung des Kriteriums: Braille-Symbol (Legende) direkt in einen Bereich schreiben anstatt mit einem Pfeil bzw. einer Führungslinie zu beschriften (vgl. BB_VF).</p>]]></help>
+      <recommendation type="one">
+        <item>
+          <desc>keine Pfeile vorhanden</desc>
+        </item>
+        <item id="TF_PF_2" role="condition" xlink:href="#TF_PD">
+          <desc>Pfeile vorhanden</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_PD" name="Wahrnehmbare Pfeildarstellung" mode="M" priority="1" relation="TF_PF_2">
+      <desc>Pfeile sollten wohldefiniert sowie gut wahrnehmbar sein.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>konkrete Form und Größe des Pfeils ist abhängig vom Medium zu wählen</li>
+			<li>Pfeilkopf mit mittelbreiter Basis (45° Winkel) verwenden</li>
+			<li>Pfeilschaft gepunktet oder gestrichelt, wenn Pfeil kein wesentlicher Bestandteil der Grafik ist</li>
+			<li>Abstand zwischen Pfeilkopf und Zielobjekt lassen (3mm)</li>
+			<li>Pfeil nicht unterbrechen; ansonsten für jeden Teil-Schaft eigene Pfeilspitze notwendig</li>
+			<li>wenn Pfeil eine Linie kreuzt, dann diese unterbrechen und Abstand zum Pfeilschaft lassen</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Pfeile sind einheitlich (wohldefiniert)</desc>
+        </item>
+        <item role="rating">
+          <desc>Pfeile sind gut wahrnehmbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_TT" name="Füllung mit taktilen Texturen" mode="H" priority="2" relation="">
+      <desc>Größere Objekte sollten mit einer taktilen Textur gefüllt werden, um das Innere vom Äußeren einer Form zu unterscheiden.</desc>
+      <help><![CDATA[<p>Anmerkung: Empfehlungen zur Eignung taktiler Texturen finden sich in Kriterium TF_ET.</p>]]></help>
+      <recommendation type="one">
+        <item id="TF_TT_1" role="condition" xlink:href="#TF_ET">
+          <desc>große Objekte sind mit einer taktilen Textur gefüllt</desc>
+        </item>
+        <item>
+          <desc>keine taktilen Texturen notwendig</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_ET" name="Eignung taktiler Texturen" mode="H" priority="2" relation="TF_TT_1">
+      <desc>Die in einer taktilen Grafik verwendeten Texturen sollten passend zur Größe einer Fläche gewählt werden.</desc>
+      <help><![CDATA[<p>Anmerkungen: Texturierte Flächen sollten zwar mindestens 1,3 cm groß sein, allerdings sind Flächen ab 2 cm noch besser erkennbar. Kleine Flächen sollten eher mit einer dichten Textur gefüllt werden, bei großen Flächen kann auch eine gröbere Textur verwendet werden.</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Seitenlänge von texturierten Flächen</desc>
+          <var name="Laenge" min="1.3 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Abstand der Füllung zur Kontur</desc>
+          <var name="Abstand" value="2 mm" media="all"/>
+        </item>
+        <item role="rating">
+          <desc>gewählte Texturen sind geeignet für die jeweilige Flächengröße</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_UT" name="Unterscheidbarkeit taktiler Texturen" mode="H" priority="1" relation="TF_TT_1">
+      <desc>Die in einer taktilen Grafik verwendeten Texturen sollten klar voneinander unterscheidbar sein.</desc>
+      <help><![CDATA[<p>Anmerkungen: Zu ähnliche Texturen sollten nicht in einer Grafik zusammen verwendet werden. Beispielsweise kann das Patternset aus Tangram verwendet werden, da sich die dort definierten Texturen in Tests als sinnvoll für Stiftplatte, Tiger und Schwellpapier erwiesen haben.</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>verwendete Texturen sind klar voneinander unterscheidbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TF_AT" name="Anzahl taktiler Texturen" mode="H" priority="3" relation="TF_TT_1">
+      <desc>Innerhalb einer einzelnen Grafik sollten nicht zu viele unterschiedliche Texturen verwendet werden.</desc>
+      <help><![CDATA[<p>Hinweis zur Umsetzung des Kriteriums: Falls mehr Flächen mit unterschiedlichen Bedeutungen in der Grafik vorhanden sind, sollten vor allem in kleineren Flächen lieber Braille-Labels verwendet werden (dabei Kriterien zu Braillebeschriftungen beachten).</p>]]></help>
+      <recommendation type="all">
+        <item>
+          <desc>Anzahl der verwendeten Texturen</desc>
+          <var name="Anzahl" max="5" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+  </category>
+
+  <category name="Taktile Linien" id="TL">
+    <desc>Linien lassen sich generell besser voneinander unterscheiden, wenn unterschiedliche Linienarten verwendet werden anstatt diese nur durch ihre Stärke zu variieren [FIBS]. Bei der Umsetzung von Linien ist dabei auf die folgenden Kriterien zu achten.</desc>
+    <help></help>
+    <criterion id="TL_V" name="Linienverfolgung" mode="M" priority="1" relation="">
+      <desc>Linien müssen gut taktil verfolgbar sein, ohne dass der Leser den Anschluss verliert.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>leichtes Verfolgen ist abhängig von Größe und Linienart</li>
+			<li>Linienunterbrechungen sollten nicht größer als eine Fingerspitzenbreite sein (max. 6 mm), um die Verfolgung zu gewährleisten</li>
+			<li>zur Überprüfung sollte man alle Linien auf dem taktilen Ausdruck mit den Fingern verfolgen</li>
+			<li>die Verfolgung einer dickeren Konturlinie ist auch dann noch möglich, wenn diese durch schmälere oder andersartige Linien gekreuzt wird</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item role="rating">
+          <desc>Linien sind gut taktil verfolgbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TL_B" name="Linienbreite" mode="H" priority="1" relation="">
+      <desc>Taktile Linien müssen abhängig vom Medium und ihres Zwecks eine bestimmte Mindestbreite aufweisen, um wahrnehmbar zu sein.</desc>
+      <help><![CDATA[<p>Hinweis zur Umsetzung des Kriteriums: Damit zwei unterschiedlich dicke Linien unterscheidbar sind, müssen sie sich in ihrer Dicke um mindestens 25 % unterscheiden. Beim Tigerausdruck muss dieser Wert aufgrund der Rasterung teilweise noch höher liegen, da unterschiedliche Linienstärken manchmal in der gleichen Breite resultieren.</p>]]></help>
+      <recommendation type="count">
+        <item>
+          <desc>Breite für Hauptlinien</desc>
+          <var name="Breite" min="0.1 cm" max="0.25 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Breite für Hilfslinien</desc>
+          <var name="Breite" value="0.07 cm" media="all"/>
+          <var name="Breite" value="0.0 cm" media="Tiger"/>
+        </item>
+        <item>
+          <desc>Achsen des Koordinatensystems</desc>
+          <var name="Breite" value="1 mm" media="all"/>
+        </item>
+        <item>
+          <desc>unterschiedliche Linientypen unterscheiden sich in ihrer Dicke um mindestens 25%</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TL_L" name="Linienlänge" mode="H" priority="1" relation="">
+      <desc>Alle Linien müssen eine minimale Länge aufweisen, die es ermöglicht, den Stil der Linie eindeutig zu erkennen.</desc>
+      <help></help>
+      <recommendation type="count">
+        <item>
+          <desc>Länge von Hauptlinien bei durchgehendem Linienstil</desc>
+          <var name="Laenge" min="2.5 cm" media="all"/>
+        </item>
+        <item>
+          <desc>Länge von Hauptlinien bei unterbrochenem Linienstil</desc>
+          <var name="Laenge" min="2.5 cm" media="all"/>
+          <var name="Anzahl Muster-Wiederholung" min="3" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TL_S" name="Linienstile" mode="M" priority="2" relation="">
+      <desc>Die in einer Grafik verwendeten Linienstile sollten sich gut voneinander unterscheiden und nicht mit durchgängigen Linien verwechselbar sein.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>gepunktete Linien: feingepunktete Linie (0,1 cm dick) besonders gut verfolgbar bei 5 Punkten auf 2,5 cm; ist zusammen verwendbar mit grobkörniger Linie (0,2 cm dick mit 4 Punkten auf 2,5 cm)</li>
+			<li>gestrichelte Linien: sollten keine Kurven haben, einzelne Striche sollten immer gleichartig sein (ca. 9 mm lang) und den gleichen Abstand zueinander aufweisen (etwa eine halbe Strichlänge)</li>
+			<li>Doppellinien eher vermeiden, ansonsten sollten die beiden Linien etwa 2 mm auseinanderliegen und somit eine kleine Furche bilden</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item role="rating">
+          <desc>die verwendeten Liniestile sind gut unterscheidbar</desc>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TL_A" name="Abstand zwischen Linien" mode="H" priority="1" relation="">
+      <desc>Um zwei Linien als separate Linien zu erkennen, müssen diese einen gewissen Abstand zueinander aufweisen.</desc>
+      <help></help>
+      <recommendation type="all">
+        <item>
+          <desc>Abstand zwischen zwei Linien</desc>
+          <var name="Abstand" min="6 mm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+
+    <criterion id="TL_G" name="Gitterlinien und Raster" mode="M" priority="2" relation="">
+      <desc>Gitterlinien sollten taktil in den Hintergrund treten und das Raster sollte nicht zu klein gewählt werden.</desc>
+      <help>
+        <![CDATA[<p>Hinweise zur Umsetzung des Kriteriums:</p>
+			<ul><li>Gitterlinien sollten die am schlechtesten erkennbaren Linien in der taktilen Grafik sein (möglichst zart)</li>
+			<li>Gitterquadrate sollten nicht kleiner als 1 cm sein</li>
+			<li>falls Werte in der taktilen Grafik abgelesen werden sollen, dann sollten Gitterlinien hinzugefügt werden, auch wenn sie nicht in der originalen Grafik dargestellt sind</li>
+			</ul>]]>
+      </help>
+      <recommendation type="count">
+        <item>
+          <desc>Gitterlinien treten in den Hintergrund</desc>
+        </item>
+        <item>
+          <desc>Größe der Gitterquadrate</desc>
+          <var name="Groesse" min="1 cm" media="all"/>
+        </item>
+      </recommendation>
+    </criterion>
+  </category>
+</testCriteria>

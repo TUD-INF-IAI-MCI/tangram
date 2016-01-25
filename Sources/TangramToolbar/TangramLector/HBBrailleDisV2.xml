@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HBBrailleDisV2</name>
+    </assembly>
+    <members>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet">
+            <summary>
+            Wrapper class to the MetecBD.dll. Generates
+            an object to use the pin device.
+            </summary>
+            <summary>
+            Wrapper class to the MetecBD.dll. Generates
+            an object to use the Stiftplatte.
+            </summary>
+            <summary>
+            Wrapperclass to the MetecBD.dll. Generates
+            an object to use the Stiftplatte.
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.Recalibrate">
+            <summary>
+            Calibrates the values to which the changes of touch are compared to.
+            Before calling this method, ensure, that noone touches the modules
+            for at least 3 seconds.
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HyperBraille.HBBrailleDis.BrailleDisNet"/> class.
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.#ctor(System.Object)">
+            <summary>
+            Created the object to talk with the stiftplatte.
+            </summary>
+            <param name="config">the configurationManager to be used. Can be null, but it should not.</param>
+            <exception cref="T:System.IO.IOException">Exception occurs if no stiftplatte is connected</exception>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.StartTouchEvaluation(System.Int32)">
+            <summary>
+            Starts the touch evaluation (automatic touch input reading).
+            </summary>
+            <param name="_intervalPauseInMilliseconds">The interval pause in milliseconds.</param>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.StopTouchEvaluation">
+            <summary>
+            Stops the touch evaluation (stops automatic touch input reading).
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.ParseDeviceString(System.String)">
+            <summary>
+            Parses the device string, the device returns
+            </summary>
+            <param name="DeviceString">the string the device has returned</param>
+            <returns>the parsed information</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.Close">
+            <summary>
+            Closes connection to braille display device and releases resources.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.ReleaseAllPins">
+            <summary>
+            Releases all pins.
+            </summary>
+            <returns>True, if operation succeeds, false otherwise</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SetAllPins">
+            <summary>
+            Sets all pins.
+            </summary>
+            <returns>True, if operation succeeds, false otherwise</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SetCompleteMatrix(System.Boolean[0:,0:])">
+            <summary>
+            Refreshs the complete display with data given in matrix.
+            </summary>
+            <param name="_matrix">Boolean matrix, containing values to set.</param>
+            <returns>True, if operation succeeds, false otherwise</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SetCompleteMatrix(System.Boolean[0:,0:],System.Boolean)">
+            <summary>
+            Sends complete boolean matrix to display.
+            </summary>
+            <param name="_matrix">Boolean matrix, containing values to set.</param>
+            <param name="doUpdate">if set to <c>true</c> [do update].</param>
+            <returns>True, if operation succeeds, false otherwise</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SetModulePins(System.Int32,System.Int32,System.Boolean[])">
+            <summary>
+            Set the pins of a single module
+            </summary>
+            <param name="_moduleRow">module row number</param>
+            <param name="_moduleColumn">module columnnumber</param>
+            <param name="_pins">the pins. should be bool[<see cref="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_PINS_PER_MODULE"/>]</param>
+            <returns>true on success</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SetModulePins(System.Int32,System.Int32,System.Boolean[],System.Boolean)">
+            <summary>
+            Set the pins of a single module
+            </summary>
+            <param name="_moduleRow">module row number</param>
+            <param name="_moduleColumn">module columnnumber</param>
+            <param name="_pins">the pins. should be bool[<see cref="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_PINS_PER_MODULE"/>]</param>
+            <param name="doUpdate">true, if the changed sould be directly send to stiftplatte. If you like to call
+            the method many times, then better set it to false and call <see cref="M:HyperBraille.HBBrailleDis.BrailleDisNet.SendMatrix"/>. Sending data to stiftplatte
+            is time consuming!</param>
+            <returns>true on success</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisNet.SendMatrix">
+            <summary>
+            Sends the matrix.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.NewDeviceAttached">
+            <summary>
+            Will be called, when a new device is attached on the USB-Port.
+            </summary>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.inputChangedEvent">
+            <summary>
+            event for notifying clients of touch input changes
+            </summary>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.touchValuesChangedEvent">
+            <summary>
+            event that notify when the touch values have changed
+            </summary>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.keyStateChangedEvent">
+            <summary>
+            event that notifies, when the keys on the stiftplatte have changed.
+            </summary>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorOccured">
+            <summary>
+            Will be called, if an error occurs in the BrailleDis
+            </summary>
+        </member>
+        <member name="E:HyperBraille.HBBrailleDis.BrailleDisNet.pinStateChangedEvent">
+            <summary>
+            Occurs when pin states change on braille display.
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisNet.TouchThreshold">
+            <summary>
+            Gets or sets the touch threshold.
+            </summary>
+            <value>The touch threshold.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisNet.DeviceTypeInformation">
+            <summary>
+            Gets or sets the touch threshold. Wenn sich bei der Änderung seit dem letzten Werteabruf der Wert um 
+            TouchThresholdExceptional geändert hat, dann wird der Wert gesendet, selbst wenn er kleiner ist, als 
+            das TouchThreshold
+            </summary>
+            <value>The touch threshold.</value>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.InputChangedEventHandler">
+            <summary>
+            will be called by the <see cref="E:HyperBraille.HBBrailleDis.BrailleDisNet.inputChangedEvent"/>.
+            </summary>
+            <param name="touchInputAvailable">should be true</param>
+            <param name="valueMatrix">the current state of the touchvalues</param>
+            <param name="keyboardState">the current keyboard state</param>
+            <param name="timeStampTickCount">the tickcount timestamp from the moment, the values were fully received by the PC</param>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.TouchValuesChangedEventHandler">
+            <summary>
+            Will be called by <see cref="E:HyperBraille.HBBrailleDis.BrailleDisNet.touchValuesChangedEvent"/>
+            </summary>
+            <param name="changedModules">a list with all chanded modules, since the last call.</param>
+            <param name="activeModules">the list with currently all active modules</param>
+            <param name="timeStampTickCount">the tickcount timestamp from the moment, the values were fully received by the PC</param>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.KeyStateChangedEventHandler">
+            <summary>
+            will be called by <see cref="E:HyperBraille.HBBrailleDis.BrailleDisNet.keyStateChangedEvent"/>
+            </summary>
+            <param name="pressedKeys">the keys which were pressed here</param>
+            <param name="releasedKeys">the keys which were released here</param>
+            <param name="keyboardState">the current state of each key</param>
+            <param name="timeStampTickCount">the tickcount timestamp from the moment, the values were fully received by the PC</param>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.PinStateChangeEventHandler">
+            <summary>
+            Will be called, if the output changes. Used by <see cref="E:HyperBraille.HBBrailleDis.BrailleDisNet.pinStateChangedEvent"/>
+            </summary>
+            <param name="changedPins">the changed pins</param>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType">
+            <summary>
+            Type, which defines the error, which occurs in <see cref="T:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorOccuredHandler"/>.
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.MSG_QUEUE_HALF_FULL">
+            <summary>
+            Mentiones, that the internal messages queue is already half full
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.MSG_QUEUE_FULL">
+            <summary>
+            Mentiones, that the internal messages queue is already full. Some messages
+            may already be lost.
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.USB_PAKET_LOST">
+            <summary>
+            Mentiones, that the communication to the USB-Device lost one or more
+            pakets.
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.USB_PAKET_DEFECTIVE">
+            <summary>
+            Occurs, when the PC receives a Paket with a wrong format
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.NEW_DEVICE">
+            <summary>
+            occurs, when a new HW is connected to the software
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.DEVICE_STRING_DEFECTIVE">
+            <summary>
+            Occurs, when the device-string of the device is not correct
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorType.SEH_EXCEPTION">
+            <summary>
+            Occurs, when the device cannot been reached
+            </summary>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisNet.ErrorOccuredHandler">
+            <summary>
+            Will be called, if an error occurs in the BrailleDis
+            </summary>
+            <param name="type">The type of error</param>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisConsts">
+            <summary>
+            These are the constants of the stiftplatte. this may change in future, because
+            of different devices...
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_MODULE_ROWS">
+            <summary>
+            returns the number of module rows
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_SENSOR_ROWS">
+            <summary>
+            returns the number of sensor rows
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_MODULE_COLUMNS">
+            <summary>
+            returns the number of module columns
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.MODULE_COUNT">
+            <summary>
+            return the total number of modules
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.TOUCH_ARRAY_SIZE">
+            <summary>
+            return the number of touchvalues
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.PIN_ROWS_PER_MODULE">
+            <summary>
+            returns the number of pin rows per module
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.PIN_COLUMNS_PER_MODULE">
+            <summary>
+            returns the number of pin columns per module
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_PIN_ROWS">
+            <summary>
+            returns the number of pins row on the stiftplatte
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_PIN_COLUMNS">
+            <summary>
+            returns the number of pin columns on the stiftplatte
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.NUMBER_OF_PINS_PER_MODULE">
+            <summary>
+            returns the number of pins per module
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.INITIAL_TOUCH_THRESHOLD">
+            <summary>
+            defines the threshold for touchinput
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.TIME_TOUCH_SCAN_INTERVAL">
+            <summary>
+            obsolete; time to be waitet before the next data packet is read from hardware
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.TIME_KEYBOARD_SCAN_INTERVAL">
+            <summary>
+            time of keyboard scan interval. This is a hardware constant, do not use. this is a fault.
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_BRAILLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT1">
+            <summary>
+            identifier for braille key 1
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT2">
+            <summary>
+            identifier for braille key 2
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT3">
+            <summary>
+            identifier for braille key 3
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT7">
+            <summary>
+            identifier for braille key 7
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT4">
+            <summary>
+            identifier for braille key 4
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT5">
+            <summary>
+            identifier for braille key 5
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT6">
+            <summary>
+            identifier for braille key 6
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.BrailleDisConsts.KEY_DOT8">
+            <summary>
+            identifier for braille key 8
+            </summary>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisPinState">
+            <summary>
+            Structure to hold information on pins.
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisPinState.#ctor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HyperBraille.HBBrailleDis.BrailleDisPinState"/> struct.
+            </summary>
+            <param name="pinRow">The pin row.</param>
+            <param name="pinColumn">The pin column.</param>
+            <param name="currentValue">The current pin state.</param>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisPinState.PinRow">
+            <summary>
+            Gets the pin row.
+            </summary>
+            <value>The pin row.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisPinState.PinColumn">
+            <summary>
+            Gets the pin column.
+            </summary>
+            <value>The pin column.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisPinState.CurrentValue">
+            <summary>
+            Gets a value indicating whether [current value].
+            </summary>
+            <value><c>true</c> if [current value]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisKeyboard">
+            <summary>
+            structure for BrailleDis buttons
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisKeyboard.#ctor(System.Byte,System.Byte)">
+            <summary>
+            creates the struct. (obsoleted)
+            </summary>
+            <param name="upperKeys">the initial upperkeys. see <see cref="T:HyperBraille.HBBrailleDis.BrailleDisConsts"/></param>
+            <param name="lowerKeys">the initial lowerkeys AND extrakeys. see <see cref="T:HyperBraille.HBBrailleDis.BrailleDisConsts"/></param>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisKeyboard.#ctor(System.UInt64)">
+            <summary>
+            creates the struct.
+            </summary>
+            <param name="allKeys">the initial allKeys</param>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisKeyboard.#ctor(System.Byte[],System.Int32,System.UInt64)">
+            <summary>
+            creates the struct.
+            </summary>
+            <param name="inputBuffer"> data read from BrailleDis </param>
+            <param name="pos"> position of the data in inputBuffer </param>
+            <param name="keyFilter"> mask for allowed keys </param>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Equals(System.Object)">
+            <summary>
+            Compares with another BrailleDisKeyboard for equality
+            </summary>
+            <param name="obj">some object</param>
+            <returns>true, if both objects are equal</returns>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisKeyboard.GetHashCode">
+            <summary>
+            return the values of the keys as int.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.AllKeys">
+            <summary>
+            Sets or get all keys.
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.UpperKeys">
+            <summary>
+            Setg the Upper keys.
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.LowerKeys">
+            <summary>
+            returns the mask for the lower keys on the device. row.e. Thumb-keys)
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.ExtraKeys">
+            <summary>
+            returns the Extra Keys. (row.e. the long keys around of the device. (obsoleted)
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.KeysPressed">
+            <summary>
+            return if any key is set.
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Extra_Left">
+            <summary>
+            returns the state of the key extra_left
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Extra_Right">
+            <summary>
+            returns the state of the key extra right
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Extra_Bottom">
+            <summary>
+            returns the state of the key extra bottom
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Extra_Upper_Left">
+            <summary>
+            returns the state of the key Upperleft
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Extra_Upper_Right">
+            <summary>
+            returns the state of the key extra Upperright
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Left_1">
+            <summary>
+            returns the state of the key Upperleft 1
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Left_2">
+            <summary>
+            returns the state of the key Upperleft 2
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Left_3">
+            <summary>
+            returns the state of the key Upperleft 3
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Left_4">
+            <summary>
+            returns the state of the key Upperleft 4
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Right_1">
+            <summary>
+            returns the state of the key Upperright 1
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Right_2">
+            <summary>
+            Upperright 2
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Right_3">
+            <summary>
+            returns the state of the key Upperright 3
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Right_4">
+            <summary>
+            returns the state of the key Upperright 4
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Low_Left">
+            <summary>
+            returns the state of the key Lower left
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisKeyboard.Low_Right">
+            <summary>
+            returns the state of the key Lower right
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.DeviceHyperBraille.DoAfterInitialization">
+            <summary>
+            called after output is enabled
+            </summary>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.BrailleDisModuleState">
+            <summary>
+            Structure to return information about modules and their values seperately from the module grid
+            </summary>
+        </member>
+        <member name="M:HyperBraille.HBBrailleDis.BrailleDisModuleState.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Simple constructor
+            </summary>
+            <param name="sensorRow">the row, in which the sensor is.
+            0 - 11 for old BrailleDis, 0 - 23 for new BrailleDis </param>
+            <param name="moduleColumn">the column, in which the module is.</param>
+            <param name="lastValue">the value before the change</param>
+            <param name="currentValue">the value after the change</param>
+            <param name="generation"> BraileDisGeneration: 1 = old BraileeDis, 2 = new BrailleDis </param>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisModuleState.SensorRow">
+            <summary>
+            the row, in which the module is.
+            0 - 11 for old BrailleDis
+            0 - 23 for new BrailleDis
+            </summary>
+        </member>
+        <!-- Ungültiger XML-Kommentar wurde für den Member "P:HyperBraille.HBBrailleDis.BrailleDisModuleState.ModuleRow" ignoriert -->
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisModuleState.ModuleColumn">
+            <summary>
+            the column, in which the module is.
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisModuleState.LastValue">
+            <summary>
+            the value before the change
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisModuleState.CurrentValue">
+            <summary>
+            the value after the change
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.BrailleDisModuleState.Generation">
+            <summary>
+             Generation of the BrailleDis 1 = old, 2 = new BrailleDis
+            </summary>
+        </member>
+        <member name="T:HyperBraille.HBBrailleDis.DeviceInformation_T">
+            <summary>
+            Struct that contains the device information of the stiftplatte.
+            These information are read from hardware.
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.DeviceName">
+            <summary>
+            The DeviceName. i.e. "BrailleDis"
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.DeviceType">
+            <summary>
+            A number that defines the metec internal type. i.e. "1"
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.USBinterfaceNo">
+            <summary>
+            The USB-Port or device: i.e. "01#01" or something. possibly the USB-Hub
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.FirmwareBuild">
+            <summary>
+            The build date of the firmware. i.e. "090707"
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.SerialNo">
+            <summary>
+            The serial number of the stiftplatte. i.e. "0009"
+            </summary>
+        </member>
+        <member name="F:HyperBraille.HBBrailleDis.DeviceInformation_T.DeviceUsbString">
+            <summary>
+            The unparsed version of the DeviceSting
+            </summary>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.NumberOfPinColumns">
+            <summary>
+            Gets the number of pin columns (height).
+            </summary>
+            <value>The number of pin columns.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.NumberOfPinRows">
+            <summary>
+            Gets the number of pin rows (width).
+            </summary>
+            <value>The number of pin rows.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.NumberOfModuleColumns">
+            <summary>
+            Gets the number of module columns.
+            </summary>
+            <value>The number of module columns.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.NumberOfModuleRows">
+            <summary>
+            Gets the number of module rows.
+            </summary>
+            <value>The number of module rows.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.NumberOfSensorRows">
+            <summary>
+            Gets the number of sensor rows.
+            </summary>
+            <value>The number of sensor rows.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.PinRowsPerModule">
+            <summary>
+            Gets the pin rows per module.
+            </summary>
+            <value>The pin rows per module.</value>
+        </member>
+        <member name="P:HyperBraille.HBBrailleDis.DeviceTypeInformation.PinColumnsPerModule">
+            <summary>
+            Gets the pin columns per module.
+            </summary>
+            <value>The pin columns per module.</value>
+        </member>
+        <member name="M:HBBrailleDisV2.SplashSerialInfo.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HBBrailleDisV2.SplashSerialInfo"/> class.
+            </summary>
+            <param name="seriennummer">The seriennummer.</param>
+            <param name="withError">if set to <c>true</c> [with error].</param>
+        </member>
+        <member name="F:HBBrailleDisV2.SplashSerialInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:HBBrailleDisV2.SplashSerialInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:HBBrailleDisV2.SplashSerialInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:HBBrailleDisV2.SplashSerialInfo.Seriennummer">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
